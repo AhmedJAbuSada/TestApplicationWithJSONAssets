@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Teknasyon Test Application</string>
+    <string name="search_hint">Search</string>
+    <string name="active">Active</string>
+    <string name="passive">Passive</string>
+    <string name="height_mass">Height/Mass:</string>
+    <string name="last_position">Last Position:</string>
+    <string name="cost">Cost:</string>
+</resources>

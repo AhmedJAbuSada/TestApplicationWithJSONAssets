@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.teknasyontestapplication.ui.details.DetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        tools:context=".ui.details.DetailsActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backImageView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="61dp"
+            android:gravity="center"
+            android:text="@={viewmodel.titleTextView}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/backImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backImageView"
+            app:layout_constraintTop_toTopOf="@+id/backImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@={viewmodel.dateTextView}"
+            android:textColor="@color/grey_dark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/backImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heightMassTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/height_mass"
+            android:textColor="@color/grey_dark"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/backImageView"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@={viewmodel.heightMassTextView}"
+            android:textColor="@color/grey_dark"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/heightMassTitleTextView"
+            app:layout_constraintStart_toEndOf="@+id/heightMassTitleTextView"
+            app:layout_constraintTop_toTopOf="@+id/heightMassTitleTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/costTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cost"
+            android:textColor="@color/grey_dark"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/heightMassTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/heightMassTitleTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@={viewmodel.costTextView}"
+            android:textColor="@color/grey_dark"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/costTitleTextView"
+            app:layout_constraintStart_toEndOf="@+id/costTitleTextView"
+            app:layout_constraintTop_toTopOf="@+id/costTitleTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lastPositionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/last_position"
+            android:textColor="@color/grey_dark"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/costTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/costTitleTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@={viewmodel.lastPositionTextView}"
+            android:textColor="@color/grey_dark"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lastPositionTextView"
+            app:layout_constraintStart_toEndOf="@+id/lastPositionTextView"
+            app:layout_constraintTop_toTopOf="@+id/lastPositionTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
